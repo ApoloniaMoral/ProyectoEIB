@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChatHistory">
+    <accountData>
+      <list>
+        <AccountData>
+          <accountId value="VXNlcjozMjY3MDA=" />
+          <chats>
+            <list>
+              <chat>
+                <accountId value="VXNlcjozMjY3MDA=" />
+                <internalId value="0bead91a-7b17-4250-b12e-a186843f5aaa" />
+                <llm>
+                  <llm>
+                    <model value="anthropic/claude-2.0" />
+                    <provider value="Anthropic" />
+                    <title value="Claude 2.0" />
+                  </llm>
+                </llm>
+              </chat>
+              <chat>
+                <accountId value="VXNlcjozMjY3MDA=" />
+                <internalId value="3206bf1b-ca5e-4982-bbe8-de60adbb7e1d" />
+                <llm>
+                  <llm>
+                    <model value="anthropic/claude-2.0" />
+                    <provider value="Anthropic" />
+                    <title value="Claude 2.0" />
+                  </llm>
+                </llm>
+                <messages>
+                  <list>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="creame un cluster de libros" />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                      <text value=" Lo siento, no puedo crear físicamente un cluster de libros. Soy un agente de conversación de inteligencia artificial sin capacidad para manipular objetos físicos. Sin embargo, puedo intentar ayudarte a organizar conceptualmente un grupo o colección de libros si me das más detalles sobre qué tipo de agrupación o clasificación buscas hacer con ellos. Por favor dime más sobre qué criterios quieres usar para agrupar los libros (por ejemplo, por tema, género, autor, etc.) y haré mi mejor esfuerzo para sugerir una forma de organizarlos conceptualmente en grupos o clusters." />
+                    </message>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="un programa de android studio donde se muestre los libros que creemos con el mismo programa al usuario " />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                      <text value=" Aquí tiene un ejemplo de cómo crear una aplicación en Android Studio para mostrar una lista de libros:&#10;&#10;```java&#10;// MainActivity.java&#10;&#10;import android.os.Bundle;&#10;import android.widget.ArrayAdapter;&#10;import android.widget.ListView;&#10;&#10;import androidx.appcompat.app.AppCompatActivity;&#10;&#10;import java.util.ArrayList;&#10;&#10;public class MainActivity extends AppCompatActivity {&#10;&#10;  ArrayList&lt;Book&gt; bookList = new ArrayList&lt;&gt;();&#10;  &#10;  @Override&#10;  protected void onCreate(Bundle savedInstanceState) {&#10;    super.onCreate(savedInstanceState);&#10;    setContentView(R.layout.activity_main);&#10;&#10;    // Cargar libros de ejemplo&#10;    bookList.add(new Book(&quot;El principito&quot;, &quot;Antoine de Saint-Exupéry&quot;)); &#10;    bookList.add(new Book(&quot;Cien años de soledad&quot;, &quot;Gabriel García Márquez&quot;));&#10;    &#10;    // Obtener referencia al ListView&#10;    ListView listView = findViewById(R.id.book_list);&#10;&#10;    // Crear un ArrayAdapter para los libros&#10;    ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, bookList);&#10;    &#10;    // Asignar el adapter al ListView&#10;    listView.setAdapter(adapter); &#10;  }&#10;}&#10;&#10;// Book.java&#10;public class Book {&#10;  private String title;&#10;  private String author;&#10;&#10;  public Book(String title, String author) {&#10;    this.title = title;&#10;    this.author = author;&#10;  }&#10;&#10;  @Override&#10;  public String toString() {&#10;    return title + &quot; - &quot; + author; &#10;  }&#10;}&#10;```&#10;&#10;Esto mostrará una lista simple con los libros agregados. Se pueden agregar más libros a la lista `bookList` y se mostrarán automáticamente.&#10;&#10;También se podría agregar funcionalidad para que el usuario pueda ingresar nuevos libros desde la interfaz." />
+                    </message>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="Book es Libro y tiene estos parámetros &#10;&#10;public class Libro{&#10;        private String id;&#10;        private String titulo;&#10;        private String autor;&#10;        private int paginas;&#10;        private String genero;&#10;        private String editorial;&#10;        private int anio;&#10;        private String isbn;&#10;        private String portada;&#10;&#10;        //Contructores&#10;&#10;        //Constructor vacío&#10;        public Libro() {&#10;&#10;        }&#10;&#10;        //Constructor con todos los datos&#10;&#10;        public Libro(String id, String titulo, String autor, int paginas, String genero, String editorial, int anio, String isbn, String portada) {&#10;            this.id = id;&#10;            this.titulo = titulo;&#10;            this.autor = autor;&#10;            this.paginas = paginas;&#10;            this.genero = genero;&#10;            this.editorial = editorial;&#10;            this.anio = anio;&#10;            this.isbn = isbn;&#10;            this.portada = portada;&#10;        }&#10;&#10;        //Constructor con todos los datos menos id&#10;        public Libro(String titulo, String autor, int paginas, String genero, String editorial, int anio, String isbn, String portada) {&#10;&#10;            this.titulo = titulo;&#10;            this.autor = autor;&#10;            this.paginas = paginas;&#10;            this.genero = genero;&#10;            this.editorial = editorial;&#10;            this.anio = anio;&#10;            this.isbn = isbn;&#10;            this.portada = portada;&#10;&#10;        }&#10;        //Getters y Setters&#10;&#10;&#10;        public String getId() {&#10;            return id;&#10;        }&#10;&#10;        public void setId(String id) {&#10;            this.id = id;&#10;        }&#10;&#10;        public String getTitulo() {&#10;            return titulo;&#10;        }&#10;&#10;        public void setTitulo(String titulo) {&#10;            this.titulo = titulo;&#10;        }&#10;&#10;        public String getAutor() {&#10;            return autor;&#10;        }&#10;&#10;        public void setAutor(String autor) {&#10;            this.autor = autor;&#10;        }&#10;&#10;        public int getPaginas() {&#10;            return paginas;&#10;        }&#10;&#10;        public void setPaginas(int paginas) {&#10;            this.paginas = paginas;&#10;        }&#10;&#10;        public String getGenero() {&#10;            return genero;&#10;        }&#10;&#10;        public void setGenero(String genero) {&#10;            this.genero = genero;&#10;        }&#10;&#10;        public String getEditorial() {&#10;            return editorial;&#10;        }&#10;&#10;        public void setEditorial(String editorial) {&#10;            this.editorial = editorial;&#10;        }&#10;&#10;        public int getAnio() {&#10;            return anio;&#10;        }&#10;&#10;        public void setAnio(int anio) {&#10;            this.anio = anio;&#10;        }&#10;&#10;        public String getIsbn() {&#10;            return isbn;&#10;        }&#10;&#10;        public void setIsbn(String isbn) {&#10;            this.isbn = isbn;&#10;        }&#10;&#10;        public String getPortada() {&#10;            return portada;&#10;        }&#10;&#10;        public void setPortada(String portada) {&#10;            this.portada = portada;&#10;        }&#10;&#10;        //ToString&#10;&#10;&#10;        @Override&#10;        public String toString() {&#10;            return &amp;quot;Libro{&amp;quot; +&#10;                    &amp;quot;id='&amp;quot; + id + '\'' +&#10;                    &amp;quot;, titulo='&amp;quot; + titulo + '\'' +&#10;                    &amp;quot;, autor='&amp;quot; + autor + '\'' +&#10;                    &amp;quot;, paginas=&amp;quot; + paginas +&#10;                    &amp;quot;, genero='&amp;quot; + genero + '\'' +&#10;                    &amp;quot;, editorial='&amp;quot; + editorial + '\'' +&#10;                    &amp;quot;, anio=&amp;quot; + anio +&#10;                    &amp;quot;, isbn='&amp;quot; + isbn + '\'' +&#10;                    &amp;quot;, portada='&amp;quot; + portada + '\'' +&#10;                    '}';&#10;        }&#10;&#10;&#10;&#10;}" />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                      <text value=" Aquí está cómo se podría implementar la clase Libro y mostrar una lista de libros en Android Studio:&#10;&#10;```java&#10;// Libro.java&#10;public class Libro {&#10;&#10;  private String id;&#10;  private String titulo;&#10;  private String autor;&#10;  private int paginas;&#10;  private String genero;&#10;  private String editorial;&#10;  private int anio;&#10;  private String isbn;&#10;  private String portada;&#10;&#10;  // constructores, getters y setters&#10;&#10;  @Override&#10;  public String toString() {&#10;    return titulo + &quot; - &quot; + autor;&#10;  }&#10;&#10;}&#10;&#10;// MainActivity.java&#10;&#10;public class MainActivity extends AppCompatActivity {&#10;&#10;  ArrayList&lt;Libro&gt; libros = new ArrayList&lt;&gt;();&#10;&#10;  @Override&#10;  protected void onCreate(Bundle savedInstanceState) {&#10;    super.onCreate(savedInstanceState);&#10;    setContentView(R.layout.activity_main);&#10;&#10;    // agregar algunos libros de ejemplo&#10;    libros.add(new Libro(&quot;El principito&quot;, &quot;Antoine de Saint-Exupéry&quot;, ...));&#10;    &#10;    // obtener referencia al ListView&#10;    ListView listView = findViewById(R.id.libro_list);&#10;&#10;    // crear un ArrayAdapter&#10;    ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, libros);&#10;&#10;    // asignar el adapter al ListView&#10;    listView.setAdapter(adapter);&#10;  }&#10;&#10;}&#10;```&#10;&#10;De esta forma se crea la clase Libro con los atributos indicados, se crea una lista de libros y se muestra en un ListView usando un ArrayAdapter. Se pueden agregar más libros y se mostrarán automáticamente." />
+                    </message>
+                  </list>
+                </messages>
+                <updatedAt value="2024-03-19T01:14:34.3020459" />
+              </chat>
+              <chat>
+                <internalId value="9210e0dd-b702-4ef6-92e8-7c65b701c034" />
+                <llm>
+                  <llm>
+                    <model value="anthropic/claude-3-sonnet-20240229" />
+                    <provider value="Anthropic" />
+                    <title value="Claude 3 Sonnet" />
+                  </llm>
+                </llm>
+              </chat>
+            </list>
+          </chats>
+          <defaultLlm>
+            <llm>
+              <model value="anthropic/claude-3-sonnet-20240229" />
+              <provider value="Anthropic" />
+              <title value="Claude 3 Sonnet" />
+            </llm>
+          </defaultLlm>
+        </AccountData>
+      </list>
+    </accountData>
+    <chats>
+      <list>
+        <chat>
+          <internalId value="e06edb2f-6b03-41d3-8ccb-08eea5128ddc" />
+        </chat>
+        <chat>
+          <accountId value="VXNlcjozMjY3MDA=" />
+          <internalId value="0bead91a-7b17-4250-b12e-a186843f5aaa" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-2.0" />
+              <provider value="Anthropic" />
+              <title value="Claude 2.0" />
+            </llm>
+          </llm>
+        </chat>
+        <chat>
+          <accountId value="VXNlcjozMjY3MDA=" />
+          <internalId value="3206bf1b-ca5e-4982-bbe8-de60adbb7e1d" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-2.0" />
+              <provider value="Anthropic" />
+              <title value="Claude 2.0" />
+            </llm>
+          </llm>
+          <messages>
+            <list>
+              <message>
+                <speaker value="HUMAN" />
+                <text value="creame un cluster de libros" />
+              </message>
+              <message>
+                <speaker value="ASSISTANT" />
+                <text value=" Lo siento, no puedo crear físicamente un cluster de libros. Soy un agente de conversación de inteligencia artificial sin capacidad para manipular objetos físicos. Sin embargo, puedo intentar ayudarte a organizar conceptualmente un grupo o colección de libros si me das más detalles sobre qué tipo de agrupación o clasificación buscas hacer con ellos. Por favor dime más sobre qué criterios quieres usar para agrupar los libros (por ejemplo, por tema, género, autor, etc.) y haré mi mejor esfuerzo para sugerir una forma de organizarlos conceptualmente en grupos o clusters." />
+              </message>
+              <message>
+                <speaker value="HUMAN" />
+                <text value="un programa de android studio donde se muestre los libros que creemos con el mismo programa al usuario " />
+              </message>
+              <message>
+                <speaker value="ASSISTANT" />
+                <text value=" Aquí tiene un ejemplo de cómo crear una aplicación en Android Studio para mostrar una lista de libros:&#10;&#10;```java&#10;// MainActivity.java&#10;&#10;import android.os.Bundle;&#10;import android.widget.ArrayAdapter;&#10;import android.widget.ListView;&#10;&#10;import androidx.appcompat.app.AppCompatActivity;&#10;&#10;import java.util.ArrayList;&#10;&#10;public class MainActivity extends AppCompatActivity {&#10;&#10;  ArrayList&lt;Book&gt; bookList = new ArrayList&lt;&gt;();&#10;  &#10;  @Override&#10;  protected void onCreate(Bundle savedInstanceState) {&#10;    super.onCreate(savedInstanceState);&#10;    setContentView(R.layout.activity_main);&#10;&#10;    // Cargar libros de ejemplo&#10;    bookList.add(new Book(&quot;El principito&quot;, &quot;Antoine de Saint-Exupéry&quot;)); &#10;    bookList.add(new Book(&quot;Cien años de soledad&quot;, &quot;Gabriel García Márquez&quot;));&#10;    &#10;    // Obtener referencia al ListView&#10;    ListView listView = findViewById(R.id.book_list);&#10;&#10;    // Crear un ArrayAdapter para los libros&#10;    ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, bookList);&#10;    &#10;    // Asignar el adapter al ListView&#10;    listView.setAdapter(adapter); &#10;  }&#10;}&#10;&#10;// Book.java&#10;public class Book {&#10;  private String title;&#10;  private String author;&#10;&#10;  public Book(String title, String author) {&#10;    this.title = title;&#10;    this.author = author;&#10;  }&#10;&#10;  @Override&#10;  public String toString() {&#10;    return title + &quot; - &quot; + author; &#10;  }&#10;}&#10;```&#10;&#10;Esto mostrará una lista simple con los libros agregados. Se pueden agregar más libros a la lista `bookList` y se mostrarán automáticamente.&#10;&#10;También se podría agregar funcionalidad para que el usuario pueda ingresar nuevos libros desde la interfaz." />
+              </message>
+              <message>
+                <speaker value="HUMAN" />
+                <text value="Book es Libro y tiene estos parámetros &#10;&#10;public class Libro{&#10;        private String id;&#10;        private String titulo;&#10;        private String autor;&#10;        private int paginas;&#10;        private String genero;&#10;        private String editorial;&#10;        private int anio;&#10;        private String isbn;&#10;        private String portada;&#10;&#10;        //Contructores&#10;&#10;        //Constructor vacío&#10;        public Libro() {&#10;&#10;        }&#10;&#10;        //Constructor con todos los datos&#10;&#10;        public Libro(String id, String titulo, String autor, int paginas, String genero, String editorial, int anio, String isbn, String portada) {&#10;            this.id = id;&#10;            this.titulo = titulo;&#10;            this.autor = autor;&#10;            this.paginas = paginas;&#10;            this.genero = genero;&#10;            this.editorial = editorial;&#10;            this.anio = anio;&#10;            this.isbn = isbn;&#10;            this.portada = portada;&#10;        }&#10;&#10;        //Constructor con todos los datos menos id&#10;        public Libro(String titulo, String autor, int paginas, String genero, String editorial, int anio, String isbn, String portada) {&#10;&#10;            this.titulo = titulo;&#10;            this.autor = autor;&#10;            this.paginas = paginas;&#10;            this.genero = genero;&#10;            this.editorial = editorial;&#10;            this.anio = anio;&#10;            this.isbn = isbn;&#10;            this.portada = portada;&#10;&#10;        }&#10;        //Getters y Setters&#10;&#10;&#10;        public String getId() {&#10;            return id;&#10;        }&#10;&#10;        public void setId(String id) {&#10;            this.id = id;&#10;        }&#10;&#10;        public String getTitulo() {&#10;            return titulo;&#10;        }&#10;&#10;        public void setTitulo(String titulo) {&#10;            this.titulo = titulo;&#10;        }&#10;&#10;        public String getAutor() {&#10;            return autor;&#10;        }&#10;&#10;        public void setAutor(String autor) {&#10;            this.autor = autor;&#10;        }&#10;&#10;        public int getPaginas() {&#10;            return paginas;&#10;        }&#10;&#10;        public void setPaginas(int paginas) {&#10;            this.paginas = paginas;&#10;        }&#10;&#10;        public String getGenero() {&#10;            return genero;&#10;        }&#10;&#10;        public void setGenero(String genero) {&#10;            this.genero = genero;&#10;        }&#10;&#10;        public String getEditorial() {&#10;            return editorial;&#10;        }&#10;&#10;        public void setEditorial(String editorial) {&#10;            this.editorial = editorial;&#10;        }&#10;&#10;        public int getAnio() {&#10;            return anio;&#10;        }&#10;&#10;        public void setAnio(int anio) {&#10;            this.anio = anio;&#10;        }&#10;&#10;        public String getIsbn() {&#10;            return isbn;&#10;        }&#10;&#10;        public void setIsbn(String isbn) {&#10;            this.isbn = isbn;&#10;        }&#10;&#10;        public String getPortada() {&#10;            return portada;&#10;        }&#10;&#10;        public void setPortada(String portada) {&#10;            this.portada = portada;&#10;        }&#10;&#10;        //ToString&#10;&#10;&#10;        @Override&#10;        public String toString() {&#10;            return &amp;quot;Libro{&amp;quot; +&#10;                    &amp;quot;id='&amp;quot; + id + '\'' +&#10;                    &amp;quot;, titulo='&amp;quot; + titulo + '\'' +&#10;                    &amp;quot;, autor='&amp;quot; + autor + '\'' +&#10;                    &amp;quot;, paginas=&amp;quot; + paginas +&#10;                    &amp;quot;, genero='&amp;quot; + genero + '\'' +&#10;                    &amp;quot;, editorial='&amp;quot; + editorial + '\'' +&#10;                    &amp;quot;, anio=&amp;quot; + anio +&#10;                    &amp;quot;, isbn='&amp;quot; + isbn + '\'' +&#10;                    &amp;quot;, portada='&amp;quot; + portada + '\'' +&#10;                    '}';&#10;        }&#10;&#10;&#10;&#10;}" />
+              </message>
+              <message>
+                <speaker value="ASSISTANT" />
+                <text value=" Aquí está cómo se podría implementar la clase Libro y mostrar una lista de libros en Android Studio:&#10;&#10;```java&#10;// Libro.java&#10;public class Libro {&#10;&#10;  private String id;&#10;  private String titulo;&#10;  private String autor;&#10;  private int paginas;&#10;  private String genero;&#10;  private String editorial;&#10;  private int anio;&#10;  private String isbn;&#10;  private String portada;&#10;&#10;  // constructores, getters y setters&#10;&#10;  @Override&#10;  public String toString() {&#10;    return titulo + &quot; - &quot; + autor;&#10;  }&#10;&#10;}&#10;&#10;// MainActivity.java&#10;&#10;public class MainActivity extends AppCompatActivity {&#10;&#10;  ArrayList&lt;Libro&gt; libros = new ArrayList&lt;&gt;();&#10;&#10;  @Override&#10;  protected void onCreate(Bundle savedInstanceState) {&#10;    super.onCreate(savedInstanceState);&#10;    setContentView(R.layout.activity_main);&#10;&#10;    // agregar algunos libros de ejemplo&#10;    libros.add(new Libro(&quot;El principito&quot;, &quot;Antoine de Saint-Exupéry&quot;, ...));&#10;    &#10;    // obtener referencia al ListView&#10;    ListView listView = findViewById(R.id.libro_list);&#10;&#10;    // crear un ArrayAdapter&#10;    ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, libros);&#10;&#10;    // asignar el adapter al ListView&#10;    listView.setAdapter(adapter);&#10;  }&#10;&#10;}&#10;```&#10;&#10;De esta forma se crea la clase Libro con los atributos indicados, se crea una lista de libros y se muestra en un ListView usando un ArrayAdapter. Se pueden agregar más libros y se mostrarán automáticamente." />
+              </message>
+            </list>
+          </messages>
+          <updatedAt value="2024-03-19T01:14:34.3020459" />
+        </chat>
+      </list>
+    </chats>
+  </component>
+</project>
